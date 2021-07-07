@@ -21,21 +21,20 @@ function scuberGreetingForFeet(ft){
 }
 
 function ternaryCheckCity(city){
-  const c = city.toUpperCase();
-  if (c === nyc) {
-    return soundsGood;
-  } else {
-    return noGo;
-  }
+  return city.toUpperCase() === nyc ? soundsGood : noGo;
 }
 
 function switchOnCharmFromTip(tip){
-  const Ctip = tip.toLowerCase;
-  if (tip === generous) {
-    return thankYouSoMuch;
-  } else if (tip === notGenerous) {
-    return thankYou;
-  } else {
-    return bye;
+  let res;
+  switch(tip) {
+    case generous:
+      res = thankYouSoMuch;
+      break;
+    case notGenerous:
+      res = thankYou;
+      break;
+    default:
+      res = bye;
   }
+  return res;
 }
